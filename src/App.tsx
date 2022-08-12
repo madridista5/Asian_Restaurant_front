@@ -1,10 +1,10 @@
 import React from 'react';
-
-import { AboutUs, Chef, FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu } from './container';
 import { Navbar } from './components';
+import {AboutUs, Chef, SpecialMenu, Laurels, Gallery, FindUs, Intro, Footer, Header } from './container';
+
 import './App.css';
 
-const App = () => (
+export const App = () => (
   <div>
     <Navbar />
     <Header />
@@ -18,5 +18,3 @@ const App = () => (
     <Footer />
   </div>
 );
-
-export default App;
