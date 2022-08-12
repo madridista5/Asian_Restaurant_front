@@ -40,8 +40,6 @@ const award05 = '../assets/award05.png';
 const sign = '../assets/sign.png';
 // import quote from '../assets/quote.png';
 const quote = '../assets/quote.png';
-// import gericht from '../assets/gericht.png';
-const gericht = '../assets/gericht.png';
 
 export const images = {
   bg,
@@ -65,5 +63,4 @@ export const images = {
   award05,
   sign,
   quote,
-  gericht,
 };
