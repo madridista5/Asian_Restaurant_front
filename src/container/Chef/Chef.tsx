@@ -23,7 +23,7 @@ export const Chef = () => (
 
               <div className="app__chef-sign">
                   <p>Daiki Takahashi</p>
-                  <p className="p__opensans">Szef kuchnii</p>
+                  <p className="p__opensans">Szef kuchni</p>
               </div>
 
           </div>
