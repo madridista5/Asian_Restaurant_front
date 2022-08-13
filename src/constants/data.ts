@@ -1,5 +1,3 @@
-import {images} from './images';
-
 export const pastaAndRice = [
   {
     title: 'Udon smażony',
@@ -48,23 +46,19 @@ export const seafood = [
 
 export const awards = [
   {
-    imgUrl: images.award02,
-    title: 'Bib Gourmond',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    title: 'Ranking restauratorów Forbes',
+    subtitle: 'W kwietniowym numerze magazynu Forbes ukazał się pierwszy ranking TOP 50 Najlepszych Restauratorów. Znaleźliśmy się na 26 miejscu w Polsce ;-)',
   },
   {
-    imgUrl: images.award01,
-    title: 'Rising Star',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    title: 'Gault & Millau 2017',
+    subtitle: 'W roku 2017 doceniono nas nieco bardziej i otrzymaliśmy 11,5 punktów i 1 czapkę.',
   },
   {
-    imgUrl: images.award05,
-    title: 'AA Hospitality',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    title: 'Poland Best 100 Restaurants',
+    subtitle: 'W 2014 roku znaleźliśmy się w prestiżowym rankingu Poland Best 100 Restaurants.',
   },
   {
-    imgUrl: images.award03,
-    title: 'Outstanding Chef',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    title: 'Trip advisor 2012',
+    subtitle: 'W 2012 roku otrzymaliśmy wyróżnienie TripAdvisor Recomended przyznane na podstawie recenzji wystawionych przez użytkowników tego największego na świecie portalu turystycznego świata.',
   },
 ];
