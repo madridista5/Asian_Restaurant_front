@@ -17,7 +17,7 @@ const knife = '../assets/knife.png';
 // import logo from '../assets/logo.png';
 const logo = '../assets/logo.png';
 // import menu from '../assets/menu.png';
-const menu = '../assets/menu.png';
+// const menu = '../assets/menu.png';
 // import overlaybg from '../assets/overlaybg.png';
 const overlaybg = '../assets/overlaybg.png';
 // import spoon from '../assets/spoon.svg';
@@ -51,7 +51,7 @@ export const images = {
   gallery04,
   knife,
   logo,
-  menu,
+  // menu,
   overlaybg,
   spoon,
   welcome,
