@@ -13,6 +13,8 @@ export const Laurels = () => (
                 {awards.map(award => <AwardCard key={award.title} title={award.title} subtitle={award.subtitle}/>)}
             </div>
         </div>
-        <div className="app__wrapper_img"></div>
+        <div className="app__wrapper_img">
+            <img src={require('../../assets/laurels.jpg')} alt="award"/>
+        </div>
     </div>
 );
