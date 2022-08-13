@@ -30,3 +30,7 @@
     text-transform: capitalize;
     color: var(--color-golden);
 }
+
+@media screen and (max-width: 2000px) {
+
+}
