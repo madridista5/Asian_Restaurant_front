@@ -1,5 +1,5 @@
 import React from 'react';
-import {SubHeading} from "../../components";
+import {MenuItem, SubHeading} from "../../components";
 import {pastaAndRice, seafood} from '../../constants/data';
 
 import './SpecialMenu.css';
@@ -12,12 +12,11 @@ export const SpecialMenu = () => (
       </div>
 
       <div className="app__specialMenu-menu">
-
-          <div className="app__specialMenu-menu_wine flex__center">
-              <p className="app__specialMenu_menu_heading ">Makarony i ryż z WOK</p>
+          <div className="app__specialMenu-menu_pasta flex__center">
+              <p className="app__specialMenu-menu_heading">Makarony i ryż z WOK</p>
               <div className="app__specialMenu_menu_items">
                   {pastaAndRice.map((dish, index) => (
-                      <p key={index}>{dish.title}</p>
+                      <MenuItem key={index} title={dish.title} price={dish.price} description={dish.description}/>
                   ))}
               </div>
           </div>
@@ -26,18 +25,19 @@ export const SpecialMenu = () => (
               <img src={require('../../assets/menu.jpg')} alt="menu img"/>
           </div>
 
-          <div className="app__specialMenu-menu_cocktails flex__center">
-              <p className="app__specialMenu_menu_heading ">Owoce morza</p>
+          <div className="app__specialMenu-menu_seafood flex__center">
+              <p className="app__specialMenu-menu_heading">Owoce morza</p>
               <div className="app__specialMenu_menu_items">
                   {seafood.map((dish, index) => (
-                      <p key={index}>{dish.title}</p>
+                      <MenuItem key={index} title={dish.title} price={dish.price} description={dish.description}/>
                   ))}
               </div>
           </div>
-
-          <div style={{marginTop: '15px'}}>
-              <button type="button" className="custom__button">Więcej</button>
-          </div>
       </div>
+
+      <div style={{marginTop: '15px'}}>
+          <button type="button" className="custom__button">Więcej</button>
+      </div>
+
   </div>
 );
