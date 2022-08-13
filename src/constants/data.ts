@@ -1,58 +1,48 @@
 import {images} from './images';
 
-export const wines = [
+export const pastaAndRice = [
   {
-    title: 'Chapel Hill Shiraz',
-    price: '$56',
-    tags: 'AU | Bottle',
+    title: 'Udon smażony',
+    price: '45 zł',
+    description: 'pikantny (gruby makaron pszenny), dodaj do koszyka, aby wybrać opcje',
   },
   {
-    title: 'Catena Malbee',
-    price: '$59',
-    tags: 'AU | Bottle',
+    title: 'Pad Thai',
+    price: '33 zł',
+    description: 'makaron ryżowy, słodki, z orzeszkami, dodaj do koszyka, aby wybrać opcje',
   },
   {
-    title: 'La Vieillw Rose',
-    price: '$44',
-    tags: 'FR | 750 ml',
+    title: 'Mien',
+    price: '34 zł',
+    description: 'Makaron sojowy',
   },
   {
-    title: 'Rhino Pale Ale',
-    price: '$31',
-    tags: 'CA | 750 ml',
-  },
-  {
-    title: 'Irish Guinness',
-    price: '$26',
-    tags: 'IE | 750 ml',
+    title: 'Ryż smażony',
+    price: '25 zł',
+    description: 'ryż smażony z jajkiem i dodatkami',
   },
 ];
 
-export const cocktails = [
+export const seafood = [
   {
-    title: 'Aperol Sprtiz',
-    price: '$20',
-    tags: 'Aperol | Villa Marchesi prosecco | soda | 30 ml',
+    title: 'Łosoś grillowany w sosie sojowym',
+    price: '62 zł',
+    description: 'ryż, brokuły',
   },
   {
-    title: "Dark 'N' Stormy",
-    price: '$16',
-    tags: 'Dark rum | Ginger beer | Slice of lime',
+    title: "Krewetki Black Tiger na maśle z trawą cytrynową",
+    price: '52 zł',
+    description: 'na maśle, z trawą cytrynową',
   },
   {
-    title: 'Daiquiri',
-    price: '$10',
-    tags: 'Rum | Citrus juice | Sugar',
+    title: 'Krewetki Black Tiger w curry z mlekiem kokosowym',
+    price: '52 zł',
+    description: 'w curry z mlekiem kokosowym, dodaj do koszyka, aby wybrać opcje',
   },
   {
-    title: 'Old Fashioned',
-    price: '$31',
-    tags: 'Bourbon | Brown sugar | Angostura Bitters',
-  },
-  {
-    title: 'Negroni',
-    price: '$26',
-    tags: 'Gin | Sweet Vermouth | Campari | Orange garnish',
+    title: 'Krewetki Black Tiger panierowane w młodym ryżu z batatami',
+    price: '54 zł',
+    description: 'panierowane w młodym ryżu z batatami',
   },
 ];
 
