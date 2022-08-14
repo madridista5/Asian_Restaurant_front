@@ -1,8 +1,8 @@
 import React, {useRef} from 'react';
 import {BsArrowRightShort, BsArrowLeftShort, BsInstagram} from 'react-icons/bs';
+import {SubHeading} from "../../components";
 
 import './Gallery.css';
-import {SubHeading} from "../../components";
 
 const images = [
     '../../assets/gallery01.png',
