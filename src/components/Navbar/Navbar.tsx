@@ -22,7 +22,7 @@ export const Navbar = () => {
             <div className="app__navbar-login">
                 <a href="#login" className="p__opensans">Logowanie / Rejestracja</a>
                 <div/>
-                <a href="/" className="p__opensans">Zarezerwuj stolik</a>
+                <a href="/" className="p__opensans">Moje zamówienie</a>
             </div>
             <div className="app__navbar-smallscreen">
                 <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggleMenu(true)}/>
