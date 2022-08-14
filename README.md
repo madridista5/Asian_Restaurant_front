@@ -7,7 +7,7 @@
 <br />
 
 - [About the Project](#star2-about-the-project)
-  * [How the application works](#camera-screenshots)
+  * [Screenshots](#camera-screenshots)
   * [Tech Stack](#space_invader-tech-stack)
 - [Getting Started](#toolbox-getting-started)
   * [Prerequisites](#bangbang-prerequisites)
