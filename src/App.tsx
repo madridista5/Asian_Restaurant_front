@@ -1,9 +1,20 @@
-import React from "react";
+import React from 'react';
+import { Navbar } from './components';
+import {AboutUs, Chef, SpecialMenu, Laurels, Gallery, FindUs, Intro, Footer, Header } from './container';
 
-export const App = () => {
-    return (
-        <div>
-            <h1>Hello</h1>
-        </div>
-    );
-}
+import './App.css';
+
+export const App = () => (
+  <div>
+    <Navbar />
+    <Header />
+    <AboutUs />
+    <SpecialMenu />
+    <Chef />
+    <Intro />
+    <Laurels />
+    <Gallery />
+    <FindUs />
+    <Footer />
+  </div>
+);
