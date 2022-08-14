@@ -30,7 +30,6 @@ export const Gallery = () => {
             <div className="app__gallery-content">
                 <SubHeading title="Instagram"/>
                 <h1 className="headtext__cormorant">Galeria</h1>
-                <button className="custom__button" type="button">Więcej</button>
             </div>
 
             <div className="app__gallery-images">
