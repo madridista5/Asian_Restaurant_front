@@ -1,0 +1,14 @@
+.login__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.login__wrapper input {
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+
+.register-btn {
+    color: var(--color-golden);
+    margin-top: 1rem;
+}
