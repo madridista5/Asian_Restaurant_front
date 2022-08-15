@@ -1,20 +1,15 @@
 import React from 'react';
-import { Navbar } from './components';
-import {AboutUs, Chef, SpecialMenu, Laurels, Gallery, FindUs, Intro, Footer, Header } from './container';
+import {HomePageWrapper} from "./container/HomePageWrapper/HomePageWrapper";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import './App.css';
 
 export const App = () => (
-  <div>
-    <Navbar />
-    <Header />
-    <AboutUs />
-    <SpecialMenu />
-    <Chef />
-    <Intro />
-    <Laurels />
-    <Gallery />
-    <FindUs />
-    <Footer />
-  </div>
+    <React.StrictMode>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomePageWrapper/>}/>
+            </Routes>
+        </BrowserRouter>
+    </React.StrictMode>
 );
