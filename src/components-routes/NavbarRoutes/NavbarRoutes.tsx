@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import {GiHamburger, GiHamburgerMenu} from 'react-icons/gi';
 import {MdOutlineRestaurantMenu} from 'react-icons/md';
 
-import './Navbar.css';
+import '../../components/Navbar/Navbar.css';
 
-export const Navbar = () => {
+export const NavbarRoutes = () => {
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
     return (
@@ -13,11 +13,7 @@ export const Navbar = () => {
                 <img src={require("../../assets/asian_food.png")} alt="app logo"/>
             </div>
             <ul className="app__navbar-links">
-                <li className="p__opensans"><a href="#home">Home</a></li>
-                <li className="p__opensans"><a href="#about">O nas</a></li>
-                <li className="p__opensans"><a href="#menu">Menu</a></li>
-                <li className="p__opensans"><a href="#awards">Nagrody</a></li>
-                <li className="p__opensans"><a href="#contact">Kontakt</a></li>
+                <li className="p__opensans"><a href="/">Home</a></li>
             </ul>
             <div className="app__navbar-login">
                 <a href="/login" className="p__opensans">Logowanie / Rejestracja</a>
@@ -32,11 +28,8 @@ export const Navbar = () => {
                         <MdOutlineRestaurantMenu fontSize={27} className="overlay__close"
                                                  onClick={() => setToggleMenu(false)}/>
                         <ul className="app__navbar-smallscreen-links">
-                            <li className="p__opensans"><a href="#home">Home</a></li>
-                            <li className="p__opensans"><a href="#about">O nas</a></li>
-                            <li className="p__opensans"><a href="#menu">Menu</a></li>
-                            <li className="p__opensans"><a href="#awards">Nagrody</a></li>
-                            <li className="p__opensans"><a href="#contact">Kontakt</a></li>
+                            <li className="p__opensans"><a href="/">Home</a></li>
+                            <li className="p__opensans"><a href="/menu">Menu</a></li>
                         </ul>
                     </div>
                 )}
