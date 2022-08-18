@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import {GiHamburger, GiHamburgerMenu} from 'react-icons/gi';
+import { GiHamburgerMenu} from 'react-icons/gi';
 import {MdOutlineRestaurantMenu} from 'react-icons/md';
 
 import './Navbar.css';
+import {Link} from "react-router-dom";
 
 export const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
@@ -20,9 +21,9 @@ export const Navbar = () => {
                 <li className="p__opensans"><a href="#contact">Kontakt</a></li>
             </ul>
             <div className="app__navbar-login">
-                <a href="/login" className="p__opensans">Logowanie / Rejestracja</a>
+                <Link to="/login" className="p__opensans">Logowanie / Rejestracja</Link>
                 <div/>
-                <a href="/" className="p__opensans">Moje zamówienie</a>
+                <Link to="/" className="p__opensans">Moje zamówienie</Link>
             </div>
             <div className="app__navbar-smallscreen">
                 <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggleMenu(true)}/>

@@ -3,6 +3,7 @@ import {NavbarRoutes} from "../NavbarRoutes/NavbarRoutes";
 import {SubHeading} from "../../components";
 import {UserRoleContext} from "../../contexts/userRole.context";
 import {axiosFunction} from "../../utils/axios-function";
+import {Link} from "react-router-dom";
 
 import './LoginForm.css';
 
@@ -61,7 +62,7 @@ export const LoginForm = () => {
                             <input type="password" placeholder="hasło" onChange={e => setPassword(e.target.value)}
                                    value={password}/>
                             <button type="submit" className="custom__button">Zaloguj</button>
-                            <p className="p__opensans register-btn"><a href="/register">Rejestracja</a></p>
+                            <p className="p__opensans register-btn"><Link to="/register">Rejestracja</Link></p>
                         </form>
                     </div>
                 </div>
