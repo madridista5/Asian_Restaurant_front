@@ -1,12 +1,14 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import { GiHamburgerMenu} from 'react-icons/gi';
 import {MdOutlineRestaurantMenu} from 'react-icons/md';
+import {Link} from "react-router-dom";
+import {UserRoleContext} from "../../contexts/userRole.context";
 
 import './Navbar.css';
-import {Link} from "react-router-dom";
 
 export const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
+    const {userRole} = useContext(UserRoleContext);
 
     return (
         <nav className="app__navbar">
@@ -19,6 +21,7 @@ export const Navbar = () => {
                 <li className="p__opensans"><a href="#menu">Menu</a></li>
                 <li className="p__opensans"><a href="#awards">Nagrody</a></li>
                 <li className="p__opensans"><a href="#contact">Kontakt</a></li>
+                {userRole && <li className="p__opensans"><Link to="/signOut">Wyloguj</Link></li>}
             </ul>
             <div className="app__navbar-login">
                 <Link to="/login" className="p__opensans">Logowanie / Rejestracja</Link>
