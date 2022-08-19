@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 import './MenuItem.css';
 
@@ -10,6 +11,7 @@ interface Props {
 
 export const MenuItem = (props: Props) => {
     const {title, price, description} = props;
+
     return (
         <div className="app__menuitem">
             <div className="app__menuitem-head">
@@ -29,6 +31,10 @@ export const MenuItem = (props: Props) => {
             <div className="app__menuitem-sub">
                 <p className="p__opensans" style={{color: '#AAA'}}>{description}</p>
             </div>
+
+            <button type="button" className="custom__button" style={{marginBottom: '2rem'}}>
+                <Link to="/">Dodaj do zamówienia</Link>
+            </button>
 
         </div>
     );

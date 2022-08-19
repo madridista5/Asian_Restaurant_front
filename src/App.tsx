@@ -5,6 +5,7 @@ import {LoginForm} from "./components-routes/LoginForm/LoginForm";
 import {UserRoleContext} from "./contexts/userRole.context";
 import {RegisterForm} from "./components-routes/RegisterForm/RegisterForm";
 import {SignOutInfo} from "./components-routes/SignOutInfo/SignOutInfo";
+import {AllMenu} from "./components-routes/AllMenu/AllMenu";
 
 import './App.css';
 
@@ -18,6 +19,7 @@ export const App = () => {
                 <Route path="/login" element={<LoginForm/>}/>
                 <Route path="/register" element={<RegisterForm/>}/>
                 <Route path="/signOut" element={<SignOutInfo/>}/>
+                <Route path="/menu" element={<AllMenu/>}/>
             </Routes>
         </UserRoleContext.Provider>
     );
