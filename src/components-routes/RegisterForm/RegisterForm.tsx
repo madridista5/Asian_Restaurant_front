@@ -3,6 +3,7 @@ import {NavbarRoutes} from "../NavbarRoutes/NavbarRoutes";
 import {SubHeading} from "../../components";
 import {axiosFunction} from "../../utils/axios-function";
 import {RegisterUserResponse} from "types";
+import {LoginRegisterInfo} from "../LoginRegisterInfo/LoginRegisterInfo";
 
 export const RegisterForm = () => {
     const [email, setEmail] = useState<string>('');
@@ -46,7 +47,8 @@ export const RegisterForm = () => {
             <NavbarRoutes/>
 
             {isRegistered
-                ? <div className="app__bg app__wrapper section__padding">
+                ? <LoginRegisterInfo info={`Jesteś zarejestrowany w Asian Food. Zaloguj się.`}/>
+                : <div className="app__bg app__wrapper section__padding">
                     <div className="app__wrapper_info">
                         <SubHeading title="Asian Food"/>
                         <h1 className="headtext__cormorant" style={{marginBottom: '3rem'}}>Rejestracja</h1>
@@ -69,8 +71,6 @@ export const RegisterForm = () => {
                         <img src={require('../../assets/woman.jpg')} alt="woman"/>
                     </div>
                 </div>
-                : <h2>Konto dla użytkownika o adresie email: {email} zostało założone. Zaloguj się, aby korzystać z
-                    aplikacji.</h2>
             }
         </>
     );

@@ -4,6 +4,7 @@ import {SubHeading} from "../../components";
 import {UserRoleContext} from "../../contexts/userRole.context";
 import {axiosFunction} from "../../utils/axios-function";
 import {Link} from "react-router-dom";
+import {LoginRegisterInfo} from "../LoginRegisterInfo/LoginRegisterInfo";
 
 import './LoginForm.css';
 
@@ -45,7 +46,7 @@ export const LoginForm = () => {
         <NavbarRoutes/>
 
         {userRole
-            ? <p>zalogowano użytkownika o roli: {userRole}</p>
+            ? <LoginRegisterInfo info={`Jesteś zalogowany w Asian Food.`}/>
             : <div className="app__bg app__wrapper section__padding">
                 <div className="app__wrapper_info">
                     <SubHeading title="Asian Food"/>
