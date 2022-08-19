@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {MenuItem, SubHeading} from "../../components";
 import {pastaAndRice, seafood} from '../../constants/data';
 
@@ -36,7 +37,7 @@ export const SpecialMenu = () => (
       </div>
 
       <div style={{marginTop: '15px'}}>
-          <button type="button" className="custom__button">Więcej</button>
+          <button type="button" className="custom__button"><Link to="/menu">Zobacz menu</Link></button>
       </div>
 
   </div>
