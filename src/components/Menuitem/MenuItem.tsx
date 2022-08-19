@@ -4,7 +4,7 @@ import './MenuItem.css';
 
 interface Props {
     title: string;
-    price: string;
+    price: number;
     description: string;
 }
 
@@ -21,7 +21,7 @@ export const MenuItem = (props: Props) => {
                 <div className="app__menuitem-dash"/>
 
                 <div className="app__menuitem-price">
-                    <p className="p__cormorant">{price}</p>
+                    <p className="p__cormorant">{price} zł</p>
                 </div>
 
             </div>
