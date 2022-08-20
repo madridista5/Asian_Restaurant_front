@@ -13,10 +13,18 @@ export const Order = () => {
 
     useEffect(() => {
         (async () => {
-            const {data} = await axiosFunction.get('/basket/userBasket');
-            setMyOrder(data);
+            if(userRole) {
+                const {data} = await axiosFunction.get('/basket/userBasket');
+                setMyOrder(data);
+            }
         })();
     }, []);
+
+    const handleOrderBtn = () => {
+        (async () => {
+            await axiosFunction.delete('/basket/deleteAll');
+        })();
+    };
 
     return <>
         <NavbarRoutes/>
@@ -37,7 +45,7 @@ export const Order = () => {
                                     <MenuItem key={dish.id} title={dish.name} price={dish.price} link="/deleteDishFromBasket" btnDescription="Usuń" dishId={dish.id}/>
                                 ))}
                         </div>
-                        <button type="button" className="custom__button" style={{marginBottom: '2rem'}}><Link to="/orderedInfo">Zamów</Link></button>
+                        <button type="button" className="custom__button" style={{marginBottom: '2rem'}} onClick={handleOrderBtn}><Link to="/orderedInfo">Zamów</Link></button>
                     </div>
 
                     <div className="app__specialMenu-menu_img">

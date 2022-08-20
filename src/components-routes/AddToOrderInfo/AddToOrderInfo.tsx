@@ -12,10 +12,12 @@ export const AddToOrderInfo = () => {
 
     useEffect(() => {
         (async () => {
-            await axiosFunction.post('/basket/add', {
-                name: selectedDish.name,
-                price: selectedDish.price,
-            });
+            if(userRole) {
+                await axiosFunction.post('/basket/add', {
+                    name: selectedDish.name,
+                    price: selectedDish.price,
+                });
+            }
         })();
     },[]);
 
