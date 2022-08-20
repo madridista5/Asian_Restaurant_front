@@ -10,13 +10,17 @@ interface Props {
     description?: string;
     link: string;
     btnDescription: string;
+    dishId?: string;
 }
 
 export const MenuItem = (props: Props) => {
-    const {title, price, description, link, btnDescription} = props;
+    const {dishId, title, price, description, link, btnDescription} = props;
     const selectedDish = useContext(SelectedDishContext);
 
-    const handleBtn = (title: string, price: number) => {
+    const handleBtn = (title: string, price: number, dishId: string | undefined) => {
+        if(dishId) {
+            selectedDish.dishId = dishId;
+        }
         selectedDish.name = title;
         selectedDish.price = price;
     };
@@ -41,7 +45,7 @@ export const MenuItem = (props: Props) => {
                 <p className="p__opensans" style={{color: '#AAA'}}>{description}</p>
             </div>
 
-            <button type="button" className="custom__button" style={{marginBottom: '2rem'}} onClick={() => handleBtn(title, price)}>
+            <button type="button" className="custom__button" style={{marginBottom: '2rem'}} onClick={() => handleBtn(title, price, dishId)}>
                 <Link to={link}>{btnDescription}</Link>
             </button>
 

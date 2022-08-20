@@ -33,8 +33,8 @@ export const Order = () => {
                         <p className="app__specialMenu-menu_heading">Moje zamówienie</p>
                         <div className="app__specialMenu_menu_items">
                             {myOrder
-                                .map((dish, index) => (
-                                    <MenuItem key={index} title={dish.name} price={dish.price} link="/deleteDishFromBasket" btnDescription="Usuń"/>
+                                .map(dish => (
+                                    <MenuItem key={dish.id} title={dish.name} price={dish.price} link="/deleteDishFromBasket" btnDescription="Usuń" dishId={dish.id}/>
                                 ))}
                         </div>
                         <button type="button" className="custom__button" style={{marginBottom: '2rem'}}><Link to="/orderedInfo">Zamów</Link></button>

@@ -17,7 +17,7 @@ export const App = () => {
 
     return (
         <UserRoleContext.Provider value={{userRole, setUserRole}}>
-            <SelectedDishContext.Provider value={{name: '', price: 0}}>
+            <SelectedDishContext.Provider value={{name: '', price: 0, dishId: ''}}>
             <Routes>
                 <Route path="/" element={<HomePageWrapper/>}/>
                 <Route path="/login" element={<LoginForm/>}/>
