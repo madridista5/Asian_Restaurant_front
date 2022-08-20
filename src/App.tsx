@@ -8,9 +8,10 @@ import {SignOutInfo} from "./components-routes/SignOutInfo/SignOutInfo";
 import {AllMenu} from "./components-routes/AllMenu/AllMenu";
 import {SelectedDishContext} from "./contexts/selectedDish.context";
 import {AddToOrderInfo} from "./components-routes/AddToOrderInfo/AddToOrderInfo";
+import {Order} from "./components-routes/Order/Order";
+import {DeleteDishFromOrderInfo} from "./components-routes/DeleteDishFromOrderInfo/DeleteDishFromOrderInfo";
 
 import './App.css';
-import {Order} from "./components-routes/Order/Order";
 
 export const App = () => {
     const [userRole, setUserRole] = useState('');
@@ -26,6 +27,7 @@ export const App = () => {
                 <Route path="/menu" element={<AllMenu/>}/>
                 <Route path="/addToOrderInfo" element={<AddToOrderInfo/>}/>
                 <Route path="/order" element={<Order/>}/>
+                <Route path="/deleteDishFromBasket" element={<DeleteDishFromOrderInfo/>}/>
             </Routes>
             </SelectedDishContext.Provider>
         </UserRoleContext.Provider>
