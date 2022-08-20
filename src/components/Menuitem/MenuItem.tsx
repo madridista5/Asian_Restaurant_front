@@ -7,11 +7,13 @@ import {SelectedDishContext} from "../../contexts/selectedDish.context";
 interface Props {
     title: string;
     price: number;
-    description: string;
+    description?: string;
+    link: string;
+    btnDescription: string;
 }
 
 export const MenuItem = (props: Props) => {
-    const {title, price, description} = props;
+    const {title, price, description, link, btnDescription} = props;
     const selectedDish = useContext(SelectedDishContext);
 
     const handleBtn = (title: string, price: number) => {
@@ -40,7 +42,7 @@ export const MenuItem = (props: Props) => {
             </div>
 
             <button type="button" className="custom__button" style={{marginBottom: '2rem'}} onClick={() => handleBtn(title, price)}>
-                <Link to="/addToOrderInfo">Dodaj do zamówienia</Link>
+                <Link to={link}>{btnDescription}</Link>
             </button>
 
         </div>

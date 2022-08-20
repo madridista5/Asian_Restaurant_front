@@ -17,7 +17,7 @@ export const AddToOrderInfo = () => {
                 price: selectedDish.price,
             });
         })();
-    }, []);
+    },[]);
 
     return <>
         <NavbarRoutes/>
@@ -31,7 +31,11 @@ export const AddToOrderInfo = () => {
                     ? `Danie "${selectedDish.name}" zostało dodane do Twojego zamówienia.`
                     : 'Dodawanie do zamówienia jest możliwe tylko dla zalogowanych użytkowników. Zaloguj się.'}
                 </p>
-                <button type="button" className="custom__button"><Link to="/menu">Powrót do menu</Link></button>
+                <button type="button" className="custom__button"><Link to={userRole ? '/menu' : '/login'}>
+                    {userRole
+                    ? 'Powrót do Menu'
+                    : 'Przejdź do logowania'}
+                </Link></button>
             </div>
 
             <div className="app__wrapper_img">
