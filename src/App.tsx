@@ -10,6 +10,7 @@ import {SelectedDishContext} from "./contexts/selectedDish.context";
 import {AddToOrderInfo} from "./components-routes/AddToOrderInfo/AddToOrderInfo";
 
 import './App.css';
+import {Order} from "./components-routes/Order/Order";
 
 export const App = () => {
     const [userRole, setUserRole] = useState('');
@@ -24,6 +25,7 @@ export const App = () => {
                 <Route path="/signOut" element={<SignOutInfo/>}/>
                 <Route path="/menu" element={<AllMenu/>}/>
                 <Route path="/addToOrderInfo" element={<AddToOrderInfo/>}/>
+                <Route path="/order" element={<Order/>}/>
             </Routes>
             </SelectedDishContext.Provider>
         </UserRoleContext.Provider>
