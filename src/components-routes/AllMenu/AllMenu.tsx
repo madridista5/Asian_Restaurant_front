@@ -31,7 +31,7 @@ export const AllMenu = () => {
                             .filter(dish => dish.category === 'Makarony i ryż z WOK')
                             .map((dish, index) => (
                                 <MenuItem key={index} title={dish.name} price={dish.price}
-                                          description={dish.description}/>
+                                          description={dish.description} link="/addToOrderInfo" btnDescription="Dodaj do zamówienia"/>
                             ))}
                     </div>
                 </div>
@@ -47,7 +47,7 @@ export const AllMenu = () => {
                             .filter(dish => dish.category === 'Owoce morza')
                             .map((dish, index) => (
                                 <MenuItem key={index} title={dish.name} price={dish.price}
-                                          description={dish.description}/>
+                                          description={dish.description} link="/addToOrderInfo" btnDescription="Dodaj do zamówienia"/>
                             ))}
                     </div>
                 </div>
@@ -61,7 +61,7 @@ export const AllMenu = () => {
                             .filter(dish => dish.category === 'Zupy')
                             .map((dish, index) => (
                                 <MenuItem key={index} title={dish.name} price={dish.price}
-                                          description={dish.description}/>
+                                          description={dish.description} link="/addToOrderInfo" btnDescription="Dodaj do zamówienia"/>
                             ))}
                     </div>
                 </div>
@@ -77,7 +77,7 @@ export const AllMenu = () => {
                             .filter(dish => dish.category === 'Desery')
                             .map((dish, index) => (
                                 <MenuItem key={index} title={dish.name} price={dish.price}
-                                          description={dish.description}/>
+                                          description={dish.description} link="/addToOrderInfo" btnDescription="Dodaj do zamówienia"/>
                             ))}
                     </div>
                 </div>

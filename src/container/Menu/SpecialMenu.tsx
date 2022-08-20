@@ -32,7 +32,7 @@ export const SpecialMenu = () => {
                     <p className="app__specialMenu-menu_heading">Makarony i ryż z WOK</p>
                     <div className="app__specialMenu_menu_items">
                         {pastaAndRice.map((dish, index) => (
-                            <MenuItem key={index} title={dish.name} price={dish.price} description={dish.description}/>
+                            <MenuItem key={index} title={dish.name} price={dish.price} description={dish.description} link="/addToOrderInfo" btnDescription="Dodaj do zamówienia"/>
                         ))}
                     </div>
                 </div>
@@ -45,7 +45,7 @@ export const SpecialMenu = () => {
                     <p className="app__specialMenu-menu_heading">Owoce morza</p>
                     <div className="app__specialMenu_menu_items">
                         {seafood.map((dish, index) => (
-                            <MenuItem key={index} title={dish.name} price={dish.price} description={dish.description}/>
+                            <MenuItem key={index} title={dish.name} price={dish.price} description={dish.description} link="/addToOrderInfo" btnDescription="Dodaj do zamówienia"/>
                         ))}
                     </div>
                 </div>
