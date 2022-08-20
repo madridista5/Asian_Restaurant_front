@@ -26,7 +26,7 @@ export const Navbar = () => {
             <div className="app__navbar-login">
                 <Link to="/login" className="p__opensans">Logowanie / Rejestracja</Link>
                 <div/>
-                <Link to="/" className="p__opensans">Moje zamówienie</Link>
+                <Link to="/order" className="p__opensans">Moje zamówienie</Link>
             </div>
             <div className="app__navbar-smallscreen">
                 <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggleMenu(true)}/>
