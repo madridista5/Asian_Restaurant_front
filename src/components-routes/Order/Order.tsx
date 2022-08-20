@@ -10,12 +10,15 @@ import { Link } from "react-router-dom";
 export const Order = () => {
     const {userRole} = useContext(UserRoleContext);
     const [myOrder, setMyOrder] = useState<DishInBasketResponse[]>([]);
+    const [sumOfBasket, setSumOfBasket] = useState<number>(0);
 
     useEffect(() => {
         (async () => {
             if(userRole) {
                 const {data} = await axiosFunction.get('/basket/userBasket');
                 setMyOrder(data);
+                const sum = await axiosFunction.get('/basket/sumOfBasket');
+                setSumOfBasket(sum.data);
             }
         })();
     }, []);
@@ -45,6 +48,7 @@ export const Order = () => {
                                     <MenuItem key={dish.id} title={dish.name} price={dish.price} link="/deleteDishFromBasket" btnDescription="Usuń" dishId={dish.id}/>
                                 ))}
                         </div>
+                        <p className="app__specialMenu-menu_heading" style={{paddingBottom: '2rem'}}>Suma: {sumOfBasket} zł</p>
                         <button type="button" className="custom__button" style={{marginBottom: '2rem'}} onClick={handleOrderBtn}><Link to="/orderedInfo">Zamów</Link></button>
                     </div>
 
