@@ -8,12 +8,15 @@ import {SignOutInfo} from "./components-routes/SignOutInfo/SignOutInfo";
 import {AllMenu} from "./components-routes/AllMenu/AllMenu";
 
 import './App.css';
+import {SelectedDishContext} from "./contexts/selectedDish.context";
 
 export const App = () => {
     const [userRole, setUserRole] = useState('');
+    const [dish, setDish] = useState({});
 
     return (
         <UserRoleContext.Provider value={{userRole, setUserRole}}>
+            <SelectedDishContext.Provider value={{dish, setDish}}>
             <Routes>
                 <Route path="/" element={<HomePageWrapper/>}/>
                 <Route path="/login" element={<LoginForm/>}/>
@@ -21,6 +24,7 @@ export const App = () => {
                 <Route path="/signOut" element={<SignOutInfo/>}/>
                 <Route path="/menu" element={<AllMenu/>}/>
             </Routes>
+            </SelectedDishContext.Provider>
         </UserRoleContext.Provider>
     );
 };
