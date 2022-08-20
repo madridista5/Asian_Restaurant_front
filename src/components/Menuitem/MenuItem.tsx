@@ -12,7 +12,12 @@ interface Props {
 
 export const MenuItem = (props: Props) => {
     const {title, price, description} = props;
-    const {setDish} = useContext(SelectedDishContext);
+    const selectedDish = useContext(SelectedDishContext);
+
+    const handleBtn = (title: string, price: number) => {
+        selectedDish.name = title;
+        selectedDish.price = price;
+    };
 
     return (
         <div className="app__menuitem">
@@ -34,7 +39,7 @@ export const MenuItem = (props: Props) => {
                 <p className="p__opensans" style={{color: '#AAA'}}>{description}</p>
             </div>
 
-            <button type="button" className="custom__button" style={{marginBottom: '2rem'}} onClick={() => setDish({name: title, price: price})}>
+            <button type="button" className="custom__button" style={{marginBottom: '2rem'}} onClick={() => handleBtn(title, price)}>
                 <Link to="/addToOrderInfo">Dodaj do zamówienia</Link>
             </button>
 
