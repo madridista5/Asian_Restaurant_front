@@ -15,6 +15,7 @@ import {Admin} from "./components-routes/Admin/Admin";
 import {EditMenu} from "./components-routes/EditMenu/EditMenu";
 import {SelectedCategoryContext} from "./contexts/selectedCategory.context";
 import { UserRole } from 'types';
+import {AddDishToMenu} from "./components-routes/AddDishToMenu/AddDishToMenu";
 
 import './App.css';
 
@@ -38,6 +39,7 @@ export const App = () => {
                 <Route path="/orderedInfo" element={<OrderConfirmation/>}/>
                 <Route path="/admin" element={<Admin/>}/>
                 <Route path="/editMenu" element={<EditMenu/>}/>
+                <Route path="/addDishToMenu" element={<AddDishToMenu/>}/>
             </Routes>
                 </SelectedCategoryContext.Provider>
             </SelectedDishContext.Provider>
