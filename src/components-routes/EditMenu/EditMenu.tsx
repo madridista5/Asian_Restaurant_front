@@ -46,7 +46,7 @@ export const EditMenu = () => {
                                     .filter(dish => dish.category === 'Makarony i ryż z WOK')
                                     .map((dish, index) => (
                                         <MenuItem key={index} title={dish.name} price={dish.price}
-                                                  description={dish.description} link="/editOrDeleteDish"
+                                                  description={dish.description} dishId={dish.id} link="/editOrDeleteDish"
                                                   btnDescription="Edytuj lub usuń danie"/>
                                     ))}
                             </div>

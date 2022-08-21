@@ -16,9 +16,9 @@ import {EditMenu} from "./components-routes/EditMenu/EditMenu";
 import {SelectedCategoryContext} from "./contexts/selectedCategory.context";
 import { UserRole } from 'types';
 import {AddDishToMenu} from "./components-routes/AddDishToMenu/AddDishToMenu";
+import {EditOrDeleteDishFromMenu} from "./components-routes/EditOrDeleteDishFromMenu/EditOrDeleteDishFromMenu";
 
 import './App.css';
-import {AddDishToMenuInfo} from "./components-routes/AddDishToMenuInfo/AddDishToMenuInfo";
 
 export const App = () => {
     const [userRole, setUserRole] = useState<UserRole | ''>('');
@@ -41,7 +41,7 @@ export const App = () => {
                 <Route path="/admin" element={<Admin/>}/>
                 <Route path="/editMenu" element={<EditMenu/>}/>
                 <Route path="/addDishToMenu" element={<AddDishToMenu/>}/>
-                <Route path="/addDishToMenuInfo" element={<AddDishToMenuInfo/>}/>
+                <Route path="/editOrDeleteDish" element={<EditOrDeleteDishFromMenu/>}/>
             </Routes>
                 </SelectedCategoryContext.Provider>
             </SelectedDishContext.Provider>
