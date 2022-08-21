@@ -17,6 +17,7 @@ import {SelectedCategoryContext} from "./contexts/selectedCategory.context";
 import { UserRole } from 'types';
 import {AddDishToMenu} from "./components-routes/AddDishToMenu/AddDishToMenu";
 import {EditOrDeleteDishFromMenu} from "./components-routes/EditOrDeleteDishFromMenu/EditOrDeleteDishFromMenu";
+import {DeleteDishInfo} from "./components-routes/DeleteDishInfo/DeleteDishInfo";
 
 import './App.css';
 
@@ -42,6 +43,7 @@ export const App = () => {
                 <Route path="/editMenu" element={<EditMenu/>}/>
                 <Route path="/addDishToMenu" element={<AddDishToMenu/>}/>
                 <Route path="/editOrDeleteDish" element={<EditOrDeleteDishFromMenu/>}/>
+                <Route path="/deleteDishFromMenu" element={<DeleteDishInfo/>}/>
             </Routes>
                 </SelectedCategoryContext.Provider>
             </SelectedDishContext.Provider>

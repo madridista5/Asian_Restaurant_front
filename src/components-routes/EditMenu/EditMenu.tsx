@@ -62,9 +62,7 @@ export const EditMenu = () => {
                                 {dishes
                                     .filter(dish => dish.category === 'Owoce morza')
                                     .map((dish, index) => (
-                                        <MenuItem key={index} title={dish.name} price={dish.price}
-                                                  description={dish.description} link="/editOrDeleteDish"
-                                                  btnDescription="Edytuj lub usuń danie"/>
+                                        <MenuItem key={index} title={dish.name} price={dish.price} description={dish.description} link="/editOrDeleteDish" btnDescription="Edytuj lub usuń danie" dishId={dish.id}/>
                                     ))}
                             </div>
                         </div>
@@ -81,9 +79,7 @@ export const EditMenu = () => {
                                 {dishes
                                     .filter(dish => dish.category === 'Zupy')
                                     .map((dish, index) => (
-                                        <MenuItem key={index} title={dish.name} price={dish.price}
-                                                  description={dish.description} link="/editOrDeleteDish"
-                                                  btnDescription="Edytuj lub usuń danie"/>
+                                        <MenuItem key={index} title={dish.name} price={dish.price} description={dish.description} link="/editOrDeleteDish" btnDescription="Edytuj lub usuń danie" dishId={dish.id}/>
                                     ))}
                             </div>
                         </div>
@@ -98,9 +94,7 @@ export const EditMenu = () => {
                                 {dishes
                                     .filter(dish => dish.category === 'Desery')
                                     .map((dish, index) => (
-                                        <MenuItem key={index} title={dish.name} price={dish.price}
-                                                  description={dish.description} link="/editOrDeleteDish"
-                                                  btnDescription="Edytuj lub usuń danie"/>
+                                        <MenuItem key={index} title={dish.name} price={dish.price} description={dish.description} link="/editOrDeleteDish" btnDescription="Edytuj lub usuń danie" dishId={dish.id}/>
                                     ))}
                             </div>
                         </div>
