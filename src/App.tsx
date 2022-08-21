@@ -12,15 +12,20 @@ import {Order} from "./components-routes/Order/Order";
 import {DeleteDishFromOrderInfo} from "./components-routes/DeleteDishFromOrderInfo/DeleteDishFromOrderInfo";
 import { OrderConfirmation } from './components-routes/OrderConfirmation/OrderConfirmation';
 import {Admin} from "./components-routes/Admin/Admin";
+import {EditMenu} from "./components-routes/EditMenu/EditMenu";
+import {SelectedCategoryContext} from "./contexts/selectedCategory.context";
+import { UserRole } from 'types';
 
 import './App.css';
 
 export const App = () => {
-    const [userRole, setUserRole] = useState('');
+    const [userRole, setUserRole] = useState<UserRole | ''>('');
+    const [category, setCategory] = useState<string>('');
 
     return (
         <UserRoleContext.Provider value={{userRole, setUserRole}}>
             <SelectedDishContext.Provider value={{name: '', price: 0, dishId: ''}}>
+                <SelectedCategoryContext.Provider value={{category, setCategory}}>
             <Routes>
                 <Route path="/" element={<HomePageWrapper/>}/>
                 <Route path="/login" element={<LoginForm/>}/>
@@ -32,7 +37,9 @@ export const App = () => {
                 <Route path="/deleteDishFromBasket" element={<DeleteDishFromOrderInfo/>}/>
                 <Route path="/orderedInfo" element={<OrderConfirmation/>}/>
                 <Route path="/admin" element={<Admin/>}/>
+                <Route path="/editMenu" element={<EditMenu/>}/>
             </Routes>
+                </SelectedCategoryContext.Provider>
             </SelectedDishContext.Provider>
         </UserRoleContext.Provider>
     );
