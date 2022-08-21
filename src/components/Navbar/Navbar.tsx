@@ -22,6 +22,7 @@ export const Navbar = () => {
                 <li className="p__opensans"><a href="#awards">Nagrody</a></li>
                 <li className="p__opensans"><a href="#contact">Kontakt</a></li>
                 {userRole && <li className="p__opensans"><Link to="/signOut">Wyloguj</Link></li>}
+                {userRole === 'ADMIN' && <li className="p__opensans"><Link to="/admin">Admin</Link></li>}
             </ul>
             <div className="app__navbar-login">
                 <Link to="/login" className="p__opensans">Logowanie / Rejestracja</Link>

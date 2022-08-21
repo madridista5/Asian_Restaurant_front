@@ -11,6 +11,7 @@ import {AddToOrderInfo} from "./components-routes/AddToOrderInfo/AddToOrderInfo"
 import {Order} from "./components-routes/Order/Order";
 import {DeleteDishFromOrderInfo} from "./components-routes/DeleteDishFromOrderInfo/DeleteDishFromOrderInfo";
 import { OrderConfirmation } from './components-routes/OrderConfirmation/OrderConfirmation';
+import {Admin} from "./components-routes/Admin/Admin";
 
 import './App.css';
 
@@ -30,6 +31,7 @@ export const App = () => {
                 <Route path="/order" element={<Order/>}/>
                 <Route path="/deleteDishFromBasket" element={<DeleteDishFromOrderInfo/>}/>
                 <Route path="/orderedInfo" element={<OrderConfirmation/>}/>
+                <Route path="/admin" element={<Admin/>}/>
             </Routes>
             </SelectedDishContext.Provider>
         </UserRoleContext.Provider>

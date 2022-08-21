@@ -18,6 +18,7 @@ export const NavbarRoutes = () => {
             <ul className="app__navbar-links">
                 <li className="p__opensans"><Link to="/">Home</Link></li>
                 {userRole && <li className="p__opensans"><Link to="/signOut">Wyloguj</Link></li>}
+                {userRole === 'ADMIN' && <li className="p__opensans"><Link to="/admin">Admin</Link></li>}
             </ul>
             <div className="app__navbar-login">
                 <Link to="/login" className="p__opensans">Logowanie / Rejestracja</Link>
