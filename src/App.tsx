@@ -18,6 +18,7 @@ import { UserRole } from 'types';
 import {AddDishToMenu} from "./components-routes/AddDishToMenu/AddDishToMenu";
 
 import './App.css';
+import {AddDishToMenuInfo} from "./components-routes/AddDishToMenuInfo/AddDishToMenuInfo";
 
 export const App = () => {
     const [userRole, setUserRole] = useState<UserRole | ''>('');
@@ -40,6 +41,7 @@ export const App = () => {
                 <Route path="/admin" element={<Admin/>}/>
                 <Route path="/editMenu" element={<EditMenu/>}/>
                 <Route path="/addDishToMenu" element={<AddDishToMenu/>}/>
+                <Route path="/addDishToMenuInfo" element={<AddDishToMenuInfo/>}/>
             </Routes>
                 </SelectedCategoryContext.Provider>
             </SelectedDishContext.Provider>
