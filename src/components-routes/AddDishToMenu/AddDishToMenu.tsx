@@ -50,7 +50,7 @@ export const AddDishToMenu = () => {
                         </div>
                     </div>
                     <div className="app__wrapper_img">
-                        <img src={require('../../assets/cook.png')} alt="cook"/>
+                        <img src={require('../../assets/order.png')} alt="order png"/>
                     </div>
                 </div>
             </>}

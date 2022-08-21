@@ -22,7 +22,7 @@ export const EditOrDeleteDishFromMenu = () => {
             setDescription(data[0].description);
             setPrice(data[0].price);
         })();
-    }, []);
+    },[]);
 
     const handleForm = (e: SyntheticEvent) => {
         e.preventDefault();
@@ -61,7 +61,7 @@ export const EditOrDeleteDishFromMenu = () => {
                         </div>
                     </div>
                     <div className="app__wrapper_img">
-                        <img src={require('../../assets/cook.png')} alt="cook"/>
+                        <img src={require('../../assets/order.png')} alt="order img"/>
                     </div>
                 </div>
             </>}
