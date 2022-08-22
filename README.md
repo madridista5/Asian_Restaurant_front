@@ -7,13 +7,13 @@
 <br />
 
 - [About the Project](#star2-about-the-project)
-    * [Screenshots](#camera-screenshots)
-    * [Tech Stack](#space_invader-tech-stack)
+  * [Screenshots](#camera-screenshots)
+  * [Tech Stack](#space_invader-tech-stack)
 - [Getting Started](#toolbox-getting-started)
-    * [Prerequisites](#bangbang-prerequisites)
-    * [Run Locally](#running-run-locally)
+  * [Prerequisites](#bangbang-prerequisites)
+  * [Run Locally](#running-run-locally)
 
-
+  
 
 <!-- About the Project -->
 ## :star2: About the Project
