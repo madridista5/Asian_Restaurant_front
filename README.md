@@ -7,6 +7,7 @@
 <br />
 
 - [About the Project](#star2-about-the-project)
+  * [Description](#star-description)
   * [Screenshots](#camera-screenshots)
   * [Tech Stack](#space_invader-tech-stack)
 - [Getting Started](#toolbox-getting-started)
@@ -17,6 +18,13 @@
 
 <!-- About the Project -->
 ## :star2: About the Project
+
+<!-- Description -->
+### :star: Description
+<p>With this application you can order food from Asian Food restaurant. First of all you have to create your account, log in, open the menu and then you can add every dish to your order. There are two validations. Email must includes @ and passoword length cannot be shorter then 8 signs. If you are Admin you can also add new dish to the menu or edit/delete existing dish. The application looks good on desktop and on mobile as well.</p>
+<h4>If you do not want to create your account, you can use these example accounts:</h4>
+<p>Admin account, login: <b>admin@gmail.com</b> password: <b>admin123</b></p>
+<p>User account, login: <b>user@gmail.com</b> password: <b>user1234</b></p>
 
 
 <!-- Screenshots -->
@@ -83,6 +91,22 @@
   <ul>
     <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
     <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+    <li><a href="https://nestjs.com/">Nest.js</a></li>  
+    <li><a href="https://nodejs.org/en/">Node.js</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://typeorm.io">TypeORM</a></li>  
   </ul>
 </details>
 
