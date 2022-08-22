@@ -1,12 +1,12 @@
 import React, {useContext, useState} from 'react';
-import { GiHamburgerMenu} from 'react-icons/gi';
+import {GiHamburgerMenu} from 'react-icons/gi';
 import {MdOutlineRestaurantMenu} from 'react-icons/md';
 import {Link} from "react-router-dom";
 import {UserRoleContext} from "../../contexts/userRole.context";
 
-import './Navbar.css';
+import '../../components/Navbar/Navbar.css';
 
-export const Navbar = () => {
+export const NavbarRoutes = () => {
     const [toggleMenu, setToggleMenu] = useState<boolean>(false);
     const {userRole} = useContext(UserRoleContext);
 
@@ -16,11 +16,7 @@ export const Navbar = () => {
                 <img src={require("../../assets/asian_food.png")} alt="app logo"/>
             </div>
             <ul className="app__navbar-links">
-                <li className="p__opensans"><a href="#home">Home</a></li>
-                <li className="p__opensans"><a href="#about">O nas</a></li>
-                <li className="p__opensans"><a href="#menu">Menu</a></li>
-                <li className="p__opensans"><a href="#awards">Nagrody</a></li>
-                <li className="p__opensans"><a href="#contact">Kontakt</a></li>
+                <li className="p__opensans"><Link to="/">Home</Link></li>
                 {userRole && <li className="p__opensans"><Link to="/signOut">Wyloguj</Link></li>}
                 {userRole === 'ADMIN' && <li className="p__opensans"><Link to="/admin">Admin</Link></li>}
             </ul>
@@ -37,11 +33,8 @@ export const Navbar = () => {
                         <MdOutlineRestaurantMenu fontSize={27} className="overlay__close"
                                                  onClick={() => setToggleMenu(false)}/>
                         <ul className="app__navbar-smallscreen-links">
-                            <li className="p__opensans"><a href="#home">Home</a></li>
-                            <li className="p__opensans"><a href="#about">O nas</a></li>
-                            <li className="p__opensans"><a href="#menu">Menu</a></li>
-                            <li className="p__opensans"><a href="#awards">Nagrody</a></li>
-                            <li className="p__opensans"><a href="#contact">Kontakt</a></li>
+                            <li className="p__opensans"><Link to="/">Home</Link></li>
+                            <li className="p__opensans"><Link to="/menu">Menu</Link></li>
                             {userRole && <li className="p__opensans"><Link to="/signOut">Wyloguj</Link></li>}
                             {userRole === 'ADMIN' && <li className="p__opensans"><Link to="/admin">Admin</Link></li>}
                         </ul>

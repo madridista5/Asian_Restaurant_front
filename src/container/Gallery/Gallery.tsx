@@ -17,9 +17,9 @@ export const Gallery = () => {
     const handleScroll = (direction: string) => {
         const {current} = scrollRef;
 
-        if(direction === 'left' && current !== null) {
+        if (direction === 'left' && current !== null) {
             current.scrollLeft -= 300;
-        } else if(current !== null) {
+        } else if (current !== null) {
             current.scrollLeft += 300;
         }
     };
@@ -36,7 +36,7 @@ export const Gallery = () => {
                 <div className="app__gallery-images_container" ref={scrollRef}>
                     {images.map((image, index) => (
                         <div className="app__gallery-images_card flex__center" key={index}>
-                            <img src={require(`../../assets/gallery0${index+1}.png`)} alt="gallery_image"/>
+                            <img src={require(`../../assets/gallery0${index + 1}.png`)} alt="gallery_image"/>
                             <BsInstagram className="gallery__image-icon"/>
                         </div>
                     ))}
