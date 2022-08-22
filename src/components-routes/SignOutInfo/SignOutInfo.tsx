@@ -16,8 +16,8 @@ export const SignOutInfo = () => {
 
     return (
         <>
-        <NavbarRoutes/>
-        <LoginRegisterInfo info="Zostałeś wylogowany."/>
-    </>
+            <NavbarRoutes/>
+            <LoginRegisterInfo info="Zostałeś wylogowany."/>
+        </>
     );
 };

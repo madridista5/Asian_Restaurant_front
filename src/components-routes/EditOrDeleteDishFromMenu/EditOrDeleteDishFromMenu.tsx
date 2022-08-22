@@ -16,16 +16,19 @@ export const EditOrDeleteDishFromMenu = () => {
     const [isSentForm, setIsSentForm] = useState<boolean>(false);
 
     useEffect(() => {
-        (async () =>{
+        (async () => {
             const {data} = await axiosFunction.get(`/menu/oneDish/${selectedDish.dishId}`);
             setDish(data[0].name);
             setDescription(data[0].description);
             setPrice(data[0].price);
         })();
-    },[]);
+    }, []);
 
     const handleForm = (e: SyntheticEvent) => {
         e.preventDefault();
+        if (Number(price) > 999 || dish.length > 255 || description.length > 255) {
+            return;
+        }
         (async () => {
             await axiosFunction.post('/menu/editOneDish', {
                 id: selectedDish.dishId,
@@ -37,7 +40,7 @@ export const EditOrDeleteDishFromMenu = () => {
         setIsSentForm(true);
     };
 
-    if(isSentForm) {
+    if (isSentForm) {
         return <EditDishInfo/>;
     }
 
@@ -52,12 +55,29 @@ export const EditOrDeleteDishFromMenu = () => {
                         <h1 className="headtext__cormorant" style={{marginBottom: '3rem'}}>Wybrany posiłek:</h1>
                         <div className="app__wrapper-content">
                             <form className="login__wrapper" onSubmit={handleForm}>
-                                <input type="text" placeholder="nazwa dania" onChange={e => setDish(e.target.value)} value={dish}/>
-                                <input type="text" placeholder="Opis dania" onChange={e => setDescription(e.target.value)} value={description}/>
-                                <input type="number" placeholder="Cena" onChange={e => setPrice(Number(e.target.value))} value={price}/>
+
+                                {dish.length > 255 &&
+                                    <p className="p__opensans" style={{color: 'red'}}>Nazwa dania nie może być dłuższa
+                                        niż 255 znaków</p>}
+                                <input type="text" placeholder="nazwa dania" onChange={e => setDish(e.target.value)}
+                                       value={dish}/>
+
+                                {description.length > 255 &&
+                                    <p className="p__opensans" style={{color: 'red'}}>Opis dania nie może być dłuższy
+                                        niż 255 znaków</p>}
+                                <input type="text" placeholder="Opis dania"
+                                       onChange={e => setDescription(e.target.value)} value={description}/>
+
+                                {Number(price) > 999 &&
+                                    <p className="p__opensans" style={{color: 'red'}}>Cena dania nie może być większa
+                                        niż 999 zł</p>}
+                                <input type="number" placeholder="Cena" onChange={e => setPrice(Number(e.target.value))}
+                                       value={price}/>
+
                                 <button type="submit" className="custom__button">Edytuj</button>
                             </form>
-                            <button type="submit" className="custom__button" style={{marginTop: '1rem', width: '100%'}}><Link to="/deleteDishFromMenu">Usuń</Link></button>
+                            <button type="submit" className="custom__button" style={{marginTop: '1rem', width: '100%'}}>
+                                <Link to="/deleteDishFromMenu">Usuń</Link></button>
                         </div>
                     </div>
                     <div className="app__wrapper_img">

@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
 import {Link} from "react-router-dom";
+import {SelectedDishContext} from "../../contexts/selectedDish.context";
 
 import './MenuItem.css';
-import {SelectedDishContext} from "../../contexts/selectedDish.context";
 
 interface Props {
     title: string;
@@ -10,7 +10,7 @@ interface Props {
     description?: string;
     link: string;
     btnDescription: string;
-    dishId?: string;
+    dishId: string;
 }
 
 export const MenuItem = (props: Props) => {

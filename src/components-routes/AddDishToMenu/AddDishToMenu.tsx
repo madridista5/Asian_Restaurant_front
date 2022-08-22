@@ -4,7 +4,7 @@ import {UserRoleContext} from "../../contexts/userRole.context";
 import {SubHeading} from "../../components";
 import {SelectedCategoryContext} from "../../contexts/selectedCategory.context";
 import {axiosFunction} from "../../utils/axios-function";
-import { AddDishToMenuInfo } from "../AddDishToMenuInfo/AddDishToMenuInfo";
+import {AddDishToMenuInfo} from "../AddDishToMenuInfo/AddDishToMenuInfo";
 
 export const AddDishToMenu = () => {
     const {userRole} = useContext(UserRoleContext);
@@ -16,6 +16,9 @@ export const AddDishToMenu = () => {
 
     const handleForm = (e: SyntheticEvent) => {
         e.preventDefault();
+        if (Number(price) > 999 || dish.length > 255 || description.length > 255) {
+            return;
+        }
         (async () => {
             await axiosFunction.post('/menu/add', {
                 category,
@@ -27,7 +30,7 @@ export const AddDishToMenu = () => {
         setIsSentForm(true);
     };
 
-    if(isSentForm) {
+    if (isSentForm) {
         return <AddDishToMenuInfo/>
     }
 
@@ -42,9 +45,25 @@ export const AddDishToMenu = () => {
                         <h1 className="headtext__cormorant" style={{marginBottom: '3rem'}}>Kategoria: {category}</h1>
                         <div className="app__wrapper-content">
                             <form className="login__wrapper" onSubmit={handleForm}>
-                                <input type="text" placeholder="nazwa dania" onChange={e => setDish(e.target.value)} value={dish}/>
-                                <input type="text" placeholder="Opis dania" onChange={e => setDescription(e.target.value)} value={description}/>
-                                <input type="number" placeholder="Cena" onChange={e => setPrice(Number(e.target.value))} value={price}/>
+
+                                {dish.length > 255 &&
+                                    <p className="p__opensans" style={{color: 'red'}}>Nazwa dania nie może być dłuższa
+                                        niż 255 znaków</p>}
+                                <input type="text" placeholder="nazwa dania" onChange={e => setDish(e.target.value)}
+                                       value={dish}/>
+
+                                {description.length > 255 &&
+                                    <p className="p__opensans" style={{color: 'red'}}>Opis dania nie może być dłuższy
+                                        niż 255 znaków</p>}
+                                <input type="text" placeholder="Opis dania"
+                                       onChange={e => setDescription(e.target.value)} value={description}/>
+
+                                {Number(price) > 999 &&
+                                    <p className="p__opensans" style={{color: 'red'}}>Cena dania nie może być większa
+                                        niż 999 zł</p>}
+                                <input type="number" placeholder="Cena" onChange={e => setPrice(Number(e.target.value))}
+                                       value={price}/>
+
                                 <button type="submit" className="custom__button">Dodaj</button>
                             </form>
                         </div>

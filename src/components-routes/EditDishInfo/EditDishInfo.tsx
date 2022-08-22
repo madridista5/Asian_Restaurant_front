@@ -13,7 +13,8 @@ export const EditDishInfo = () => {
                 <SubHeading title="Potwierdzenie"/>
                 <h1 className="app__header-h1">Asian Food</h1>
                 <p className="p__opensans" style={{margin: '2rem 0'}}>Danie zostało edytowane.</p>
-                <button type="button" className="custom__button"><Link to="/editMenu">Powrót do edycji menu</Link></button>
+                <button type="button" className="custom__button"><Link to="/editMenu">Powrót do edycji menu</Link>
+                </button>
             </div>
 
             <div className="app__wrapper_img">
