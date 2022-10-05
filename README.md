@@ -131,6 +131,12 @@ password: <b>admin123</b>
   </ul>
 </details>
 
+<br>
+<p>Database structure:</p>
+<div align="center"> 
+  <img src="https://github.com/madridista5/Asian_Restaurant_front/blob/main/screenshots/db_asian_restaurant.png" alt="screenshot" />
+</div>
+
 <!-- Getting Started -->
 ## 	:toolbox: Getting Started
 
